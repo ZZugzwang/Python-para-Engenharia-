@@ -1,6 +1,5 @@
 #Aluno: João Antônio Dubeux
 #Curso: Engenharia Eletrônica
-#Cpf: 146.628.704.70
 #lista 1 : algoritimo leitura CSV
 DIGITS = "0123456789"
 def split(line):
@@ -56,3 +55,8 @@ def report(lines):
         
         yield from (f"linha {line_no:4d}: {e}" for e in errors if e)
 
+def main():
+    path = input("Arquivo CSV: ").strip()
+    try:
+        with open(path, encoding="utf-8-sig") as f:
+            errors = list(report(f))
