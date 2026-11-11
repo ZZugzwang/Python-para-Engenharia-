@@ -1,18 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8">
-<title>Relatório de validação</title>
-<style>
-body{font-family:Arial,sans-serif;margin:2em;color:#222}
-table{border-collapse:collapse;margin-bottom:2em}
-th,td{border:1px solid #999;padding:6px 10px;text-align:left}
-th{background:#e8e8e8} code{word-break:break-all}
-</style></head><body>
-<h1>Relatório de validação</h1>
-<p>Aluno: João Antônio Dubeux | Arquivo: <b>casos_teste.csv</b><br>
-Linhas lidas: 28 | Linhas com erro: 18 | Total de erros: 19</p>
-<h2>Resumo</h2>
-<table><tr><th>Categoria</th><th>Quantidade</th></tr><tr><td>NOME</td><td>1</td></tr><tr><td>CPF</td><td>9</td></tr><tr><td>cartao</td><td>9</td></tr><tr><td>campo vazio</td><td>4</td></tr><tr><td>caractere invalido</td><td>5</td></tr><tr><td>quantidade incorreta</td><td>5</td></tr><tr><td>erro de verificação</td><td>5</td></tr></table>
-<h2>Erros encontrados</h2>
-<table><tr><th>Linha</th><th>Campo</th><th>Motivo</th><th>Conteúdo da linha</th></tr>
-<tr><td>   4</td><td>CPF</td><td>campo vazio</td><td><code>Carlos Lima,,4539 7911 3571 6476</code></td></tr><tr><td>   5</td><td>cartao</td><td>campo vazio</td><td><code>Paula Mendes,529.982.247-25,</code></td></tr><tr><td>   6</td><td>NOME</td><td>campo vazio</td><td><code>,390.533.447-05,5522 0000 1111 2222</code></td></tr><tr><td>   8</td><td>CPF</td><td>quantidade incorreta de caracteres (10 digitos)</td><td><code>Dez Digitos,529.982.247-2,4539 7911 3571 6476</code></td></tr><tr><td>   9</td><td>CPF</td><td>quantidade incorreta de caracteres (12 digitos)</td><td><code>Doze Digitos,529.982.247-255,4539 7911 3571 6476</code></td></tr><tr><td>  10</td><td>CPF</td><td>erro de verificação </td><td><code>CPF Digito Errado,529.982.247-26,4539 7911 3571 6476</code></td></tr><tr><td>  11</td><td>CPF</td><td>erro de verificação </td><td><code>CPF Repetido,111.111.111-11,4539 7911 3571 6476</code></td></tr><tr><td>  12</td><td>CPF</td><td>caractere invalido</td><td><code>Dona Maria Aparecida,Maria Aparecida,4539 7911 3571 6476</code></td></tr><tr><td>  13</td><td>CPF</td><td>caractere invalido</td><td><code>CPF Letras,123.456.789-AB,4539 7911 3571 6476</code></td></tr><tr><td>  15</td><td>cartao</td><td>quantidade incorreta de caracteres (15 digitos)</td><td><code>Cartao 15 Digitos,529.982.247-25,4539 7911 3571 647</code></td></tr><tr><td>  16</td><td>cartao</td><td>quantidade incorreta de caracteres (17 digitos)</td><td><code>Cartao 17 Digitos,529.982.247-25,45397911357164768</code></td></tr><tr><td>  17</td><td>cartao</td><td>erro de verificação </td><td><code>Cartao Luhn Errado,390.533.447-05,5522 0000 1111 2223</code></td></tr><tr><td>  18</td><td>cartao</td><td>caractere invalido</td><td><code>Cartao com Hifen,529.982.247-25,4539-7911-3571-6476</code></td></tr><tr><td>  19</td><td>cartao</td><td>caractere invalido</td><td><code>Cartao Texto,529.982.247-25,nao tenho cartao</code></td></tr><tr><td>  21</td><td>CPF</td><td>erro de verificação </td><td><code>Tudo Errado,111.444.777-36,4111 1111 1111 1112</code></td></tr><tr><td>  21</td><td>cartao</td><td>erro de verificação </td><td><code>Tudo Errado,111.444.777-36,4111 1111 1111 1112</code></td></tr><tr><td>  22</td><td>cartao</td><td>caractere invalido</td><td><code>Largura Total,529.982.247-25,４５３９ ７９１１ ３５７１ ６４７６</code></td></tr><tr><td>  26</td><td>cartao</td><td>campo vazio</td><td><code>Campo Faltando,529.982.247-25</code></td></tr><tr><td>  27</td><td>CPF</td><td>quantidade incorreta de caracteres (300 digitos)</td><td><code>Longo,111111111111111111111111111111111111111111111111111111…</code></td></tr></table>
+
+<html lang="pt-BR"><head><meta charset="utf-8">
+
+<title>Relatório de validação</title>
+
+<style>
+
+body{font-family:Arial,sans-serif;margin:2em;color:#222}
+
+table{border-collapse:collapse;margin-bottom:2em}
+
+th,td{border:1px solid #999;padding:6px 10px;text-align:left}
+
+th{background:#e8e8e8} code{word-break:break-all}
+
+</style></head><body>
+
+<h1>Relatório de validação</h1>
+
+<p>Aluno: João Antônio Dubeux | Arquivo: <b>casos_teste.csv</b><br>
+
+Linhas lidas: 28 | Linhas com erro: 18 | Total de erros: 19</p>
+
+<h2>Resumo</h2>
+
+<table><tr><th>Categoria</th><th>Quantidade</th></tr><tr><td>NOME</td><td>1</td></tr><tr><td>CPF</td><td>9</td></tr><tr><td>cartao</td><td>9</td></tr><tr><td>campo vazio</td><td>4</td></tr><tr><td>caractere invalido</td><td>5</td></tr><tr><td>quantidade incorreta</td><td>5</td></tr><tr><td>erro de verificação</td><td>5</td></tr></table>
+
+<h2>Erros encontrados</h2>
+
+<table><tr><th>Linha</th><th>Campo</th><th>Motivo</th><th>Conteúdo da linha</th></tr>
+
+<tr><td>   4</td><td>CPF</td><td>campo vazio</td><td><code>Carlos Lima,,4539 7911 3571 6476</code></td></tr><tr><td>   5</td><td>cartao</td><td>campo vazio</td><td><code>Paula Mendes,529.982.247-25,</code></td></tr><tr><td>   6</td><td>NOME</td><td>campo vazio</td><td><code>,390.533.447-05,5522 0000 1111 2222</code></td></tr><tr><td>   8</td><td>CPF</td><td>quantidade incorreta de caracteres (10 digitos)</td><td><code>Dez Digitos,529.982.247-2,4539 7911 3571 6476</code></td></tr><tr><td>   9</td><td>CPF</td><td>quantidade incorreta de caracteres (12 digitos)</td><td><code>Doze Digitos,529.982.247-255,4539 7911 3571 6476</code></td></tr><tr><td>  10</td><td>CPF</td><td>erro de verificação </td><td><code>CPF Digito Errado,529.982.247-26,4539 7911 3571 6476</code></td></tr><tr><td>  11</td><td>CPF</td><td>erro de verificação </td><td><code>CPF Repetido,111.111.111-11,4539 7911 3571 6476</code></td></tr><tr><td>  12</td><td>CPF</td><td>caractere invalido</td><td><code>Dona Maria Aparecida,Maria Aparecida,4539 7911 3571 6476</code></td></tr><tr><td>  13</td><td>CPF</td><td>caractere invalido</td><td><code>CPF Letras,123.456.789-AB,4539 7911 3571 6476</code></td></tr><tr><td>  15</td><td>cartao</td><td>quantidade incorreta de caracteres (15 digitos)</td><td><code>Cartao 15 Digitos,529.982.247-25,4539 7911 3571 647</code></td></tr><tr><td>  16</td><td>cartao</td><td>quantidade incorreta de caracteres (17 digitos)</td><td><code>Cartao 17 Digitos,529.982.247-25,45397911357164768</code></td></tr><tr><td>  17</td><td>cartao</td><td>erro de verificação </td><td><code>Cartao Luhn Errado,390.533.447-05,5522 0000 1111 2223</code></td></tr><tr><td>  18</td><td>cartao</td><td>caractere invalido</td><td><code>Cartao com Hifen,529.982.247-25,4539-7911-3571-6476</code></td></tr><tr><td>  19</td><td>cartao</td><td>caractere invalido</td><td><code>Cartao Texto,529.982.247-25,nao tenho cartao</code></td></tr><tr><td>  21</td><td>CPF</td><td>erro de verificação </td><td><code>Tudo Errado,111.444.777-36,4111 1111 1111 1112</code></td></tr><tr><td>  21</td><td>cartao</td><td>erro de verificação </td><td><code>Tudo Errado,111.444.777-36,4111 1111 1111 1112</code></td></tr><tr><td>  22</td><td>cartao</td><td>caractere invalido</td><td><code>Largura Total,529.982.247-25,４５３９ ７９１１ ３５７１ ６４７６</code></td></tr><tr><td>  26</td><td>cartao</td><td>campo vazio</td><td><code>Campo Faltando,529.982.247-25</code></td></tr><tr><td>  27</td><td>CPF</td><td>quantidade incorreta de caracteres (300 digitos)</td><td><code>Longo,111111111111111111111111111111111111111111111111111111…</code></td></tr></table>
+
 </body></html>

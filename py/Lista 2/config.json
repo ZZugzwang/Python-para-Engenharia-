@@ -1,0 +1,14 @@
+{
+    "source": "file",
+    "n_samples": 320,
+    "time_scale": 0.001,
+    "voltage_scale": 0.01,
+    "file": {
+        "path": "dados.bin"
+    },
+    "serial": {
+        "port": "COM3",
+        "baudrate": 9600,
+        "timeout": 0.5
+    }
+}
