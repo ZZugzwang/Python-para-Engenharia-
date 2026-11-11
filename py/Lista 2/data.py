@@ -67,7 +67,7 @@ class SerialSource(DataSource):
         with ser:
             ser.reset_input_buffer()
  
-            # 1) pode ter começado no meio da sequência: discarta
+            # 1) pode ter começado no meio da sequência: descarta
             #  os  bytes.
             while ser.read(1):
                 pass
