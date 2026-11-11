@@ -32,7 +32,7 @@ def build_source(cfg: dict) -> DataSource:
 def compute_fft(t: np.ndarray, v: np.ndarray):
     """retorna (frequencia, magnitude) do espectro unilateral"""
     dt = np.mean(np.diff(t))    #intervalo
-    spectrum = np.fft.rtfft(v) 
+    spectrum = np.fft.rfft(v) 
     freqs = np.fft.rfftfreq(len(v), d=dt) #hz
     magnitude = np.abs(spectrum) / len(v) #normaliza por N
     magnitude[1:] *= 2
@@ -62,8 +62,8 @@ def main():
         sys.exit(1)
  
     # Aplica os fatores para obter as unidades reais
-    t = raw_t * cfg["escala de tempo"]
-    v = raw_v * cfg["escala de voltagem"]
+    t = raw_t * cfg["time_scale"]
+    v = raw_v * cfg["voltage_scale"]
  
     freqs, magnitude = compute_fft(t, v)
     peak = freqs[1:][np.argmax(magnitude[1:])]   # skip the DC bin
