@@ -1,0 +1,84 @@
+{
+    "comm": "function",
+    "mqtt": {
+        "host": "localhost",
+        "port": 1883,
+        "base_topic": "traffic"
+    },
+    "dt": 0.1,
+    "max_speed": 20.0,
+    "default_speed": 10.0,
+    "cars": [
+        {"position": [10, 203]},
+        {"position": [50, 203], "speed": 8.0}
+            ],
+    "lane_width": 3.0,
+  "city": {
+    "width": 1000.0,
+    "height": 1000.0
+  },
+  "horizontal_streets": [
+    {
+      "bottom_left": [
+        0,
+        200
+      ],
+      "bottom_right": [
+        1000,
+        200
+      ]
+    },
+    {
+      "bottom_left": [
+        0,
+        600
+      ],
+      "bottom_right": [
+        1000,
+        600
+      ]
+    }
+  ],
+  "vertical_streets": [
+    {
+      "top_left": [
+        300,
+        1000
+      ],
+      "bottom_left": [
+        300,
+        0
+      ]
+    },
+    {
+      "top_left": [
+        700,
+        1000
+      ],
+      "bottom_left": [
+        700,
+        0
+      ]
+    }
+  ],
+  "cars": [
+    {
+      "position": [
+        10,
+        203
+      ]
+    }
+  ],
+  "people": [
+    {
+      "position": [
+        305,
+        210
+      ],
+      "destination": [
+        705,
+        610
+      ]
+    }
+  ]
+}
